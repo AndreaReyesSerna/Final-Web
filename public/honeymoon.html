@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>360&deg; Image Gallery</title>
-    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <title>Honeymoon</title>
+    <meta name="description">
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
@@ -15,13 +15,13 @@
     <a-scene>
       <a-assets>
         
-        <img id="espana" crossorigin="anonymous" src="resources/img360/espana.jpg">
+        <img id="españa" crossorigin="anonymous" src="resources/img360/españa.jpg">
         <img id="praga" crossorigin="anonymous" src="resources/img360/praga.jpg">
         <img id="seattle" crossorigin="anonymous" src="resources/img360/seattle.jpg">
-        <img id="espana-thumb" crossorigin="anonymous" src="resources/img360/espana.png">
+        
+        <img id="españa-thumb" crossorigin="anonymous" src="resources/img360/españa.png">
         <img id="praga-thumb" crossorigin="anonymous" src="resources/img360/praga.png">
         <img id="seattle-thumb" crossorigin="anonymous" src="resources/img360/seattle.png">
-       
 
 
         <!-- Image link template to be reused. -->
@@ -38,32 +38,26 @@
         </script>
       </a-assets>
 
-
-    
-
       <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="10" src="#espana"
+      <a-sky id="image-360" radius="10" src="#españa"
              animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
              animation_fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete_fade"></a-sky>
 
       <!-- Image links. -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4" rotation="0 -90 0">
         <a-entity template="src: #link" data-src="#praga" data-thumb="#praga-thumb"></a-entity>
-
+        
       </a-entity>
-
-
 
       <a-entity id="links" layout="type: line; margin: 1.5" position="1 -1 -4"rotation="0 -90 0">
         
-        <a-entity template="src: #link" data-src="#espana" data-thumb="#espana-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#españa" data-thumb="#españa-thumb"></a-entity>
        
       </a-entity>
 
       <a-entity id="links" layout="type: line; margin: 1.5" position="4 -1 -4"rotation="0 -90 0">
        
         <a-entity template="src: #link" data-src="#seattle" data-thumb="#seattle-thumb"></a-entity>
-
       </a-entity>
 
       <!-- Camera + cursor. -->
