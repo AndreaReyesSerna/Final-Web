@@ -24,7 +24,7 @@
         <img id="seattle-thumb" crossorigin="anonymous" src="resources/img360/seattle.png">
 
 
-        <!-- Image link template to be reused. -->
+        <!-- plantilla -->
         <script id="link" type="text/html">
           
           <a-entity class="link"
@@ -38,12 +38,12 @@
         </script>
       </a-assets>
 
-      <!-- 360-degree image. -->
+      <!-- imagen 360 -->
       <a-sky id="image-360" radius="10" src="#españa"
              animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
              animation_fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete_fade"></a-sky>
 
-      <!-- Image links. -->
+      <!-- links de imagenes -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4" rotation="0 -90 0">
         <a-entity template="src: #link" data-src="#praga" data-thumb="#praga-thumb"></a-entity>
         
@@ -60,7 +60,7 @@
         <a-entity template="src: #link" data-src="#seattle" data-thumb="#seattle-thumb"></a-entity>
       </a-entity>
 
-      <!-- Camera + cursor. -->
+      <!-- camara y cursor -->
       <a-entity id="camera" camera look-controls>
         <a-cursor
           id="cursor"
@@ -71,11 +71,7 @@
           raycaster="objects: .link"></a-cursor>
       </a-entity>
 
-
     </a-scene>
-
-
-
     
   </body>
 </html>
