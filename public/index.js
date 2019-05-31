@@ -1,4 +1,5 @@
-import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable, TweenLite } from "gsap/all";
+
+
 
 window.addEventListener('load', function () {
     //Previsualization image
@@ -76,12 +77,10 @@ window.addEventListener('load', function () {
             diamondShapeButtons[id].classList.add('active');
         }
     }
-
-    (function ($) {
-        var box = $('.banner__card__hr');
-        TweenLite.to(box, 1, { opacity: 0, y: 50 });
-    })(jQuery);
-
+ 
+        var box = document.querySelector('.banner__card');
+        TweenLite.from(box, 1, {x: 500 , opacity: 0});
+    
 
 });
 
