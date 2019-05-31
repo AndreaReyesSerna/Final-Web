@@ -1,0 +1,124 @@
+.footer{
+    background: #81d8d0;
+    height: 300px;
+    color: white;
+   
+    
+    &__cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 180px;
+        width: 90%;
+        padding-left: 6em;
+        padding-top: 2em;
+        
+        
+        &__col-uno{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__uno{
+                margin: 0px;
+            }
+            &__dos{
+                margin: 0px;
+            }
+            &__tres{
+                margin: 0px;
+            }
+            &__cuatro{
+                margin: 0px;
+            }
+            &__cinco{
+                margin: 0px;
+            }
+            &__seis{
+                margin: 0px;
+            }
+        }
+
+        &__col-dos{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__uno{
+                margin: 0px;
+            }
+            &__dos{
+                margin: 0px;
+            }
+            &__tres{
+                margin: 0px;
+            }
+            &__cuatro{
+                margin: 0px;
+            }
+            &__cinco{
+                margin: 0px;
+            }
+            &__seis{
+                margin: 0px;
+            }
+        }
+        &__col-tres{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__uno{
+                margin: 0px;
+            }
+            &__dos{
+                margin: 0px;
+            }
+            &__tres{
+                margin: 0px;
+            }
+            &__cuatro{
+                margin: 0px;
+            }
+            &__cinco{
+                margin: 0px;
+            }
+            &__seis{
+                margin: 0px;
+            }
+        }
+
+        &__col-cuatro{
+            display: flex;
+            width: 30%;
+            flex-direction: row;
+            align-items: flex-end;
+
+            &__followus {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+
+                &__text {
+                    margin: 0 20px 0 0;
+                }
+
+                &__icons {
+                    &__icon:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    &__linea{
+        background: white;
+        height: 1px;
+        margin: 2em 6em 1em 6em;
+    }
+}

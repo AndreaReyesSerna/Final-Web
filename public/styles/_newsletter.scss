@@ -1,0 +1,61 @@
+.newsletter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 0 0 100px 0;
+    padding: 0 100px;
+    
+    &__info {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 45%;
+
+        &__h2 {
+            width: 80%;
+            margin: 0;
+            font-size: 42pt;
+            font-weight: 100;
+            line-height: 100%;
+        }
+
+        &__p {
+            width: 90%;
+            margin: 0;
+            font-size: 14pt;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 50%;
+
+        &__input {
+            width: 80%;
+            padding: 15px;
+            font-size: 12pt;
+            border: 4px solid $primary-green;
+        }
+
+        &__input::placeholder {
+            color: $primary-green;
+        }
+
+        &__button {
+            width: 60px;
+            height: 60px;    
+            background-color: $primary-green;
+            color: white;
+            border: none;
+            transition: all .2s ease;
+        }
+
+        &__button:hover {
+            padding-left: 10px;
+            cursor: pointer;
+        }
+    }
+}

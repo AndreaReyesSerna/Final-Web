@@ -1,0 +1,94 @@
+.promo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 50vh;
+    margin: 0 0 100px 0;
+
+    &__ring-container {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 40%;
+        height: 100%;
+        margin: 0 20px 0 0;
+
+        &__a {
+            width: fit-content;
+            transition: all .2s ease;
+        }
+
+        &__a:link {
+            text-decoration: none;
+            color: $primary-green;
+        }
+
+        &__a:hover {
+            font-size: 13pt;
+        }
+
+        &__a:visited {
+            text-decoration: none;
+            color: $primary-green;
+        }
+
+        &__rings {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            width: 100%;
+    
+            &__type-A {
+                width: 66.6%;
+                height: 100%;
+                margin: 0 10px 0 0;
+    
+                &__img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+    
+            &__type-B {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 32%;
+                height: 100%;
+    
+                &__img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+    
+                &__img:first-child {
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        width: 40%;
+        text-align: right;
+
+        &__h1 {
+            width: 100%;
+            margin: 0 0 20px 0;
+            color: $primary-green;
+            font-size: 62pt;
+            font-weight: 100;
+            line-height: 100%;
+        }
+
+        &__p {
+            width: 60%;
+            margin: 0;
+            font-size: 16pt;
+        }
+    }
+}
