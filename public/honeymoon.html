@@ -11,48 +11,59 @@
     <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
   </head>
   <body>
+
     <a-scene>
       <a-assets>
-        <img id="españa" crossorigin="anonymous" src="/imagenes/españa.jpg">
-        <img id="españa-thumb" crossorigin="anonymous" src="/imagenes/bilbao.png">
-        <img id="checa-thumb" crossorigin="anonymous" src="/imagenes/checa.png">
-        <img id="praga-thumb" crossorigin="anonymous" src="/imagenes/seattle.png">
-        <img id="checa" crossorigin="anonymous" src="/imagenes/praga.jpg">
-        <img id="praga" crossorigin="anonymous" src="/imagenes/pensilvania.jpg">
+        
+        <img id="espana" crossorigin="anonymous" src="resources/img360/espana.jpg">
+        <img id="praga" crossorigin="anonymous" src="resources/img360/praga.jpg">
+        <img id="seattle" crossorigin="anonymous" src="resources/img360/seattle.jpg">
+        <img id="espana-thumb" crossorigin="anonymous" src="resources/img360/espana.png">
+        <img id="praga-thumb" crossorigin="anonymous" src="resources/img360/praga.png">
+        <img id="seattle-thumb" crossorigin="anonymous" src="resources/img360/seattle.png">
+       
+
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/html">
+          
           <a-entity class="link"
-            geometry="primitive: circle; height: 1; width: 1"
+            geometry="primitive: sphere; height: 1; width: 1"
             material="shader: flat; src: ${thumb}"
-            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseenter="scale: 1.2 1.2 1.2"
             event-set__mouseleave="scale: 1 1 1"
             event-set__click="_target: #image-360; _delay: 300; material.src: ${src}"
             proxy-event="event: click; to: #image-360; as: fade"
-            sound="on: click; src: #click-sound"></a-entity>
+            ></a-entity>
         </script>
       </a-assets>
 
+
+    
+
       <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="10" src="#españa"
+      <a-sky id="image-360" radius="10" src="#espana"
              animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
              animation_fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete_fade"></a-sky>
 
       <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4">
-        <a-entity template="src: #link" data-src="#checa" data-thumb="#checa-thumb"></a-entity>
-        
-      </a-entity>
-
-      <a-entity id="links" layout="type: line; margin: 1.5" position="1 -1 -4">
-        
-        <a-entity template="src: #link" data-src="#españa" data-thumb="#españa-thumb"></a-entity>
-       
-      </a-entity>
-
-      <a-entity id="links" layout="type: line; margin: 1.5" position="4 -1 -4">
-       
+      <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4" rotation="0 -90 0">
         <a-entity template="src: #link" data-src="#praga" data-thumb="#praga-thumb"></a-entity>
+
+      </a-entity>
+
+
+
+      <a-entity id="links" layout="type: line; margin: 1.5" position="1 -1 -4"rotation="0 -90 0">
+        
+        <a-entity template="src: #link" data-src="#espana" data-thumb="#espana-thumb"></a-entity>
+       
+      </a-entity>
+
+      <a-entity id="links" layout="type: line; margin: 1.5" position="4 -1 -4"rotation="0 -90 0">
+       
+        <a-entity template="src: #link" data-src="#seattle" data-thumb="#seattle-thumb"></a-entity>
+
       </a-entity>
 
       <!-- Camera + cursor. -->
@@ -65,6 +76,12 @@
           event-set__mouseleave="_event: mouseleave; color: black"
           raycaster="objects: .link"></a-cursor>
       </a-entity>
+
+
     </a-scene>
+
+
+
+    
   </body>
 </html>

@@ -1,6 +1,3 @@
-
-
-
 window.addEventListener('load', function () {
     //Previsualization image
     var previsualization = document.querySelector('.customizing__previsualization__img');
@@ -77,10 +74,13 @@ window.addEventListener('load', function () {
             diamondShapeButtons[id].classList.add('active');
         }
     }
- 
-        var box = document.querySelector('.banner__card');
-        TweenLite.from(box, 1, {x: 500 , opacity: 0});
-    
+
+    var box = document.querySelector('.banner__card');
+    TweenLite.from(box, 1, { x: 500, opacity: 0, ease: Sine.easeIn});
+
+    var cards = document.querySelector('.features__card-container');
+    TweenLite.from(cards, 2, { autoAlpha: 0 , delay: 2 });
+
 
 });
 
