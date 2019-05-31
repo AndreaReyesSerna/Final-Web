@@ -79,7 +79,7 @@ window.addEventListener('load', function () {
     TweenLite.from(box, 1, { x: 500, opacity: 0, ease: Sine.easeIn});
 
     var cards = document.querySelector('.features__card-container');
-    TweenLite.from(cards, 2, { autoAlpha: 0 , delay: 6});
+    TweenLite.from(cards, 2, { autoAlpha: 0 , delay: 3});
     
     var titGaleria= document.querySelector('.gallery__title__h1');
     TweenLite.from(titGaleria, 1, {x: -300, ease: Sine.easeIn, delay: 6 });
