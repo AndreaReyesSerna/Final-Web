@@ -3,6 +3,7 @@ const hbs = require('express-handlebars');
 const Handlebars = require('handlebars');
 const app = express();
 
+
 app.use(express.static('public'));
 app.engine('handlebars', hbs({
     defaultlayout: false,
