@@ -87,8 +87,13 @@ window.addEventListener('load', function () {
     var menu= document.querySelector('.nav__menu');
     TweenLite.from(menu, 0.8, {y: -100, ease: Sine.easeIn});
 
-    var menu= document.querySelector('.nav__logo');
-    TweenLite.from(menu, 0.8, {y: -100, ease: Sine.easeIn});
+    var logo= document.querySelector('.nav__logo');
+    TweenLite.from(logo, 0.8, {y: -100, ease: Sine.easeIn});
+
+    var call = document.querySelector('.banner__call-to-action');
+    TweenLite.from(call, 0.6, { x: -500, opacity: 0, ease: Sine.easeIn});
+
+    
 });
 
 
