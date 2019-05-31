@@ -81,8 +81,16 @@ window.addEventListener('load', function () {
     var cards = document.querySelector('.features__card-container');
     TweenLite.from(cards, 2, { autoAlpha: 0 , delay: 6});
     
-    var imgUno= document.querySelector('.gallery__title__h1');
-    TweenLite.from(imgUno, 1, {x: -300, ease: Sine.easeIn, delay: 6 });
+    var titGaleria= document.querySelector('.gallery__title__h1');
+    TweenLite.from(titGaleria, 1, {x: -300, ease: Sine.easeIn, delay: 6 });
+
+    var menu= document.querySelector('.nav__menu');
+    TweenLite.from(menu, 0.8, {y: -100, ease: Sine.easeIn});
+
+    var menu= document.querySelector('.nav__logo');
+    TweenLite.from(menu, 0.8, {y: -100, ease: Sine.easeIn});
 });
+
+
 
 
